@@ -18,7 +18,7 @@ body {
   height: 100vh;
   background-blend-mode: multiply;
   filter: saturate(80%) contrast(85%);
-  background-color: rgb(117, 117, 182);
+  background-color: rgb(105, 105, 143);
 }
 .search {
   width: 40%;
@@ -63,9 +63,45 @@ body {
   transition: 0.2s ease;
   color: white;
   transition: 0.2s ease;
+  margin: 0px 10px;
 }
 .sign:hover {
   color: #0dcaf0;
+}
+.animated-but {
+  background-color: #0dcaf0;
+  border: none;
+  border-radius: 50px;
+  font-family: ltao1;
+  color: white;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: color 0.5s linear;
+  position: relative;
+}
+.animated-but:hover {
+  color: rgb(255, 255, 255) !important;
+}
+.animated-but::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: navy;
+  border-radius: 50px;
+  /* z-index: -1; */
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  color: white !important;
+}
+.animated-but::before {
+  transform: scaleX(0);
+}
+.animated-but:hover::before {
+  transform: scaleX(1);
 }
 /* text in img  */
 .bg-heading {
@@ -96,7 +132,7 @@ body {
 }
 .what {
   position: absolute;
-  top: 64.7%;
+  top: 55%;
   z-index: 1;
   left: 23.2%;
   color: black !important;
@@ -118,7 +154,7 @@ body {
 }
 .where {
   position: absolute;
-  top: 64.7%;
+  top: 55%;
   z-index: 1;
   left: 46%;
   color: black !important;
@@ -137,7 +173,7 @@ body {
   outline: none;
 }
 .but-search {
-  /* padding: 15px; */
+  padding: 15px;
   height: 9vh;
   border: none;
   background-color: #0dcaf0;
@@ -150,7 +186,72 @@ body {
   border-radius: 7px;
   margin-left: 1%;
 }
+.button-div {
+  /* margin-left: 30%; */
+  display: flex;
+  justify-content: center;
+}
+.div-but1 {
+  display: flex;
+  justify-content: space-around;
+}
+.div-but2 {
+  display: flex;
+  justify-content: center;
+ margin-left: 1%;
+}
+.but-1 {
+  padding: 9px 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-family: ltao1;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.2s ease;
+  margin-right: 1%;
+}
+.but-1:hover {
+  background-color: #2948c5;
+}
+.but-2 {
+  padding: 9px 20px;
+  background-color: #2948c5;
+  color: white;
+  font-family: ltao1;
+  border: none;
+  border-radius: 50px;
+  margin-right: 1%;
+}
 @media screen and (max-width: 768px) {
+  .div-nav {
+    background-color: rgba(6, 6, 5, 0.8);
+    padding: 2%;
+  }
+  .search {
+    width: 40%;
+    border-radius: 50px;
+    background-color: transparent;
+    background-image: url(img/white-search-icon.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 10%;
+    background-position-y: center;
+    background-size: 24px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding-right: 25px;
+    padding-left: 50px;
+    color: white;
+    height: 7vh;
+  }
+  .search::placeholder {
+    color: white;
+    font-size: 20px;
+    padding-left: 1%;
+  }
+  .search[type="text"]:focus {
+    outline: none;
+  }
   .nav-link {
     font-size: 20px !important;
     color: white !important;
@@ -162,6 +263,8 @@ body {
     color: white;
     transition: 0.2s ease;
     padding-left: 3%;
+    margin-right: 1.7%;
+    margin-left: 0;
   }
   .bg-heading {
     font-family: ltao;
@@ -186,11 +289,10 @@ body {
     border-radius: 7px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     display: block;
     padding: 5%;
     box-sizing: border-box;
-    
   }
   .what {
     position: absolute;
@@ -200,6 +302,8 @@ body {
     color: black !important;
     font-family: ltao1;
     font-weight: bold;
+    display: block;
+    visibility: hidden;
   }
   .where {
     position: absolute;
@@ -209,12 +313,13 @@ body {
     color: black !important;
     font-family: ltao1;
     font-weight: bold;
+    visibility: hidden;
   }
   .inp-what {
     position: relative;
     height: 7vh;
     box-sizing: border-box;
-    padding-left: 22%;
+    padding-left: 8%;
     border-radius: 7px;
     border: none;
   }
@@ -223,12 +328,12 @@ body {
   }
   .inp-where {
     position: relative;
-    height: 9vh;
+    height: 7vh;
     box-sizing: border-box;
-    padding-left: 26%;
+    padding-left: 8%;
     border-radius: 7px;
     border: none;
-    margin-top: 1.5%;
+    margin-top: 1.7%;
     margin-bottom: 1%;
   }
   .inp-where[type="text"]:focus {
@@ -236,7 +341,7 @@ body {
   }
   .but-search {
     /* padding: 15px; */
-    height: 9vh;
+    height: 7vh;
     border: none;
     background-color: #0dcaf0;
     color: white;
@@ -246,6 +351,20 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 7px;
+    margin-top: 1.5%;
+  }
+  .button-div {
+    margin-left: 0;
+    display: block;
+  }
+  .div-but2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+  }
+  .div-but1 {
+    display: flex;
+    justify-content: center;
   }
 }
 /* a.animated-button.thar-three {
