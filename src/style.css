@@ -132,7 +132,7 @@ body {
 }
 .what {
   position: absolute;
-  top: 55%;
+  top: 54.8%;
   z-index: 1;
   left: 23.2%;
   color: black !important;
@@ -154,7 +154,7 @@ body {
 }
 .where {
   position: absolute;
-  top: 55%;
+  top: 54.8%;
   z-index: 1;
   left: 46%;
   color: black !important;
@@ -210,9 +210,10 @@ body {
   font-weight: bold;
   transition: 0.2s ease;
   margin-right: 1%;
+  cursor: pointer;
 }
 .but-1:hover {
-  background-color: #2948c5;
+  background-color: #3329c5;
 }
 .but-2 {
   padding: 9px 20px;
@@ -240,6 +241,7 @@ body {
   font-family: ltao;
   padding-top: 10%;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 .det-h1:hover {
   color: #0dcaf0;
@@ -264,6 +266,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   /* animation: rotate 2s linear infinite; */
 }
@@ -302,6 +305,12 @@ body {
   object-fit: cover;
   transition: transform 0.8s;
   height: 100%;
+  cursor: pointer;
+  /* background-blend-mode: multiply;
+  filter: saturate(70%) contrast(85%);
+  background-color: rgb(98, 98, 139); */
+  background-blend-mode: multiply;
+  filter: brightness(90%) contrast(70%) saturate(80%);
 }
 .t-img-1:hover .t-img {
   -ms-transform: scale(1.1);
@@ -318,6 +327,9 @@ body {
   object-fit: cover;
   transition: transform 0.8s;
   height: 100%;
+  cursor: pointer;
+  background-blend-mode: multiply;
+  filter: brightness(90%) contrast(70%) saturate(80%);
 }
 .t-img-3:hover .t-img {
   -ms-transform: scale(1.1);
@@ -337,7 +349,7 @@ body {
   color: white;
   font-family: ltao1;
   position: absolute;
-  margin-top: -12%;
+  margin-top: -16%;
   width: 18%;
   margin-left: 2.5%;
 }
@@ -400,6 +412,111 @@ body {
 .w-p {
   color: #212529;
   font-family: ltao1;
+}
+/* .navbar{
+  transition: all 0.5s;
+}
+.navbar-scrolled{
+  background-color: rgb(15, 15, 124, 0.3);
+} */
+/* people talking about */
+
+.p-h1 {
+  font-family: ltao;
+  margin-bottom: 8%;
+}
+.p-content {
+  background-color: #f1f6f9;
+  font-family: ltao1;
+  width: 80%;
+  font-size: 20px;
+  text-align: start;
+  /* padding: 7%; */
+  padding: 30px 100px 30px 40px;
+  margin: auto;
+  font-weight: bold;
+}
+.f-h3 {
+  font-family: ltao;
+  font-size: 20px;
+  padding-top: 4%;
+}
+.people-main-div {
+  overflow-x: scroll;
+  display: flex;
+  width: auto;
+  /* height: auto; */
+}
+.people-content {
+  width: 100%;
+}
+.people-main-div::-webkit-scrollbar {
+  display: none;
+}
+/* footer section  */
+.main-footer {
+  background-color: rgb(16, 16, 61);
+  margin-bottom: -1%;
+}
+.foot-t {
+  color: #a4a6ae;
+  font-size: 16px;
+  padding-top: 10%;
+  line-height: 1.8;
+}
+.fa-flip {
+  color: #0dcaf0;
+}
+li {
+  text-decoration: none;
+  color: #a4a6ae;
+  list-style-type: none;
+}
+.li-heading {
+  font-size: 20px;
+}
+.icon-container {
+  display: inline-block;
+  perspective: 1000px;
+  color: #a4a6ae;
+}
+.icon-container i {
+  display: inline-block;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.icon-container:hover i {
+  transform: rotateY(180deg);
+  color: #0dcaf0;
+}
+.li-footer {
+  padding-bottom: 8%;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.li-footer:hover {
+  text-decoration: underline;
+  text-decoration-color: #a4a6ae;
+}
+.li-footer2 {
+  padding-bottom: 8%;
+  transition: 0.2s ease;
+  color: #a4a6ae;
+}
+.foot-input {
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  border: 1px solid #a4a6ae;
+  border-radius: 30px;
+  background: none;
+  color: #a4a6ae;
+  outline: none;
+}
+.li-footer3 {
+  padding-bottom: 2%;
+  transition: 0.2s ease;
+  color: #a4a6ae;
 }
 @media screen and (max-width: 768px) {
   .div-nav {
@@ -578,7 +695,7 @@ body {
     color: white;
     font-family: ltao1;
     position: absolute;
-    margin-top: -19%;
+    margin-top: -53%;
     width: 50%;
     margin-left: 2.5%;
   }
@@ -592,5 +709,25 @@ body {
   }
   .work {
     padding-top: 12%;
+  }
+  .p-h1 {
+    font-family: ltao;
+    margin-bottom: 5%;
+    margin-top: 12%;
+  }
+  .p-content {
+    background-color: #f1f6f9;
+    font-family: ltao1;
+    width: 90%;
+    font-size: 17px;
+    text-align: start;
+    /* padding: 7%; */
+    padding: 30px 50px 30px 40px;
+    margin: auto;
+    font-weight: bold;
+    margin-right: 4%;
+  }
+  .li-footer {
+    padding-bottom: 2%;
   }
 }
