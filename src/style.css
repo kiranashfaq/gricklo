@@ -367,6 +367,87 @@ body {
   color: #0dcaf0;
   font-family: ltao;
 }
+/* restaurant section  */
+
+.res-card-div {
+  border-bottom: 1px solid #dbdde6;
+  box-sizing: border-box;
+}
+.res-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.res-text-div {
+  padding: 2% 2%;
+  box-shadow: 2px 2px 5px #b9b9b9;
+}
+.res-h2 {
+  font-size: 25px;
+  color: #1a213d;
+  font-family: ltao;
+  padding-top: 3%;
+  text-transform: capitalize;
+}
+.res-p {
+  font-family: ltao1;
+  color: #a4a6ae;
+  font-size: 17px;
+}
+.res-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5%;
+  box-shadow: 2px 5px #dbdde6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.name {
+  font-family: ltao;
+  color: #1a213d;
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3%;
+}
+.call {
+  border-radius: 50%;
+  width: 100%;
+  background-color: rgba(48, 76, 187, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 19%;
+  height: 28px;
+  color: #2948c5;
+  margin-right: 7%;
+  transition: 0.2s ease;
+}
+.email {
+  border-radius: 50%;
+  width: 100%;
+  background-color: rgba(48, 76, 187, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 19%;
+  height: 28px;
+  color: #2948c5;
+  transition: 0.2s ease;
+  margin-right: 3%;
+}
+.call:hover {
+  background-color: #2948c5;
+  color: white;
+}
+.email:hover {
+  background-color: #2948c5;
+  color: white;
+}
 /* explore section */
 .explore-div {
   display: flex;
@@ -518,6 +599,7 @@ li {
   transition: 0.2s ease;
   color: #a4a6ae;
 }
+
 @media screen and (max-width: 768px) {
   .div-nav {
     background-color: rgba(6, 6, 5, 0.8);
